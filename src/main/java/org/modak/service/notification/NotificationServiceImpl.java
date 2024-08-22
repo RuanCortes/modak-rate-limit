@@ -26,7 +26,7 @@ public class NotificationServiceImpl implements NotificationService {
         if(calculateRateLimit(recipient, notification)){
             gateway.send(recipient.getEmail(), notification.getMessage());
         } else{
-            System.out.println("number of " + notification.getType() + " notifications exceeded for recipient: " + recipient.getEmail());
+            System.out.println("Number of " + notification.getType() + " notifications exceeded for recipient: " + recipient.getEmail());
         }
     }
 

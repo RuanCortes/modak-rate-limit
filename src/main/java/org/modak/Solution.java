@@ -37,21 +37,21 @@ public class Solution implements CommandLineRunner {
         notificationNews1.setType(Type.NEWS);
         notificationNews1.setMessage("news 1");
         notificationNews1.setDate(Instant.now());
-//        notificationRepository.save(notificationNews1);
+        notificationRepository.save(notificationNews1);
 
         Notification notificationNews2 = new Notification();
         notificationNews2.setRecipient(recipient1);
         notificationNews2.setType(Type.NEWS);
         notificationNews2.setMessage("news 2");
         notificationNews2.setDate(Instant.now());
-//        notificationRepository.save(notificationNews2);
+        notificationRepository.save(notificationNews2);
 
         Notification notificationNews3 = new Notification();
         notificationNews3.setRecipient(recipient1);
         notificationNews3.setType(Type.NEWS);
         notificationNews3.setMessage("news 3");
         notificationNews3.setDate(Instant.now());
-//        notificationRepository.save(notificationNews3);
+        notificationRepository.save(notificationNews3);
 
         Notification notificationMarketing1 = new Notification();
         notificationMarketing1.setRecipient(recipient1);
@@ -68,6 +68,8 @@ public class Solution implements CommandLineRunner {
         notificationRepository.save(notificationMarketing2);
 
         notificationService.send(recipient1, notificationNews1);
+        notificationService.send(recipient1, notificationMarketing1);
+
     }
 
 }
